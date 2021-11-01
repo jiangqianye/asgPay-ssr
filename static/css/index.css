@@ -1,0 +1,455 @@
+html {
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+html,
+body,
+header,
+footer,
+ul,
+li,
+span,
+p,
+input,
+h3,
+img {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  font-family: PingFangSC-Regular;
+  /*当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色。*/
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+}
+
+/* 支付方式 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.71rem;
+  background-color: #fff;
+  font-size: 0.71rem;
+}
+
+.header li {
+  border: solid 0.0714rem #dcdeec;
+  height: 5.285rem;
+  box-sizing: border-box;
+  flex: 1;
+  text-align: center;
+  margin: 0.357rem;
+  border-radius: 0.5rem;
+  padding-top: 0.71rem;
+  position: relative;
+}
+.h_topTips {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ff5767;
+  border-bottom-right-radius: 1.2rem;
+  color: #fff;
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  width: 70%;
+  height: 40%;
+  font-size: 1.3rem;
+}
+.h_imgTop {
+  width: 2.43rem;
+  margin-bottom: 0.214rem;
+}
+
+.h_imgBottom {
+  width: 1.357rem;
+  float: right;
+  margin-top: -0.71rem;
+  visibility: hidden;
+}
+
+.h_active {
+  border: solid 0.143rem #ff5767 !important;
+}
+
+/* 支付列表 */
+.payList_active {
+  border: solid 0.0714rem #ff5767 !important;
+}
+
+.h_active .h_imgBottom {
+  visibility: visible;
+}
+
+.goldList li {
+  background-color: #ffffff;
+  padding: 0.71rem;
+  border-radius: 0.286rem;
+  margin: 0.357rem 0.71rem;
+}
+
+.goldList li span {
+  font-family: DINAlternate-Bold;
+}
+
+.goldList li img {
+  width: 1.285rem;
+  margin-right: 0.357rem;
+}
+
+.goldList .money {
+  float: right;
+  font-size: 1.14rem;
+  color: #fd596a;
+}
+
+/* vip充值列表 */
+.vipLi {
+  background: #ffffff;
+  border-radius: 0.43rem;
+  padding: 0.71rem;
+  margin: 0.71rem;
+}
+
+.vipLi h3 {
+  font-size: 0.93rem;
+}
+
+.vipLi .pMark {
+  font-size: 0.857rem;
+  margin-bottom: 0.93rem;
+}
+
+.vipLiList {
+  width: 30%;
+  height: 3.714rem;
+  border: 0.0714rem solid #dcdeec;
+  border-radius: 0.286rem;
+  text-align: center;
+  padding-top: 0.357rem;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 1.1%;
+}
+
+.vipLiList img {
+  width: 1rem;
+}
+
+.vipLiList span {
+  font-family: DINAlternate-Bold;
+  font-size: 1.1rem;
+}
+
+.vipLiListMoney {
+  font-size: 0.857rem;
+  color: #9ea7b9;
+}
+
+/* 模态窗 */
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.5);
+  top: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+}
+
+
+.modal_content {
+  width: 100%;
+  margin: 1.43rem;
+  background-color: #f5f5f5;
+  border-radius: 0.71rem;
+  padding: 1.43rem 0;
+}
+
+.modal_content h3 {
+  font-size: 1.1rem;
+  margin: 0 1.285rem 0.71rem 1.285rem;
+}
+
+.modal_content h3 img {
+  float: right;
+  margin: 0.357rem;
+  width: 1.1rem;
+}
+
+.modal_content p {
+  font-size: 0.9rem;
+  color: #555555;
+  margin-left: 1.285rem;
+  margin-bottom: 0.214rem;
+}
+
+.modal_content p span {
+  color: #fd596a;
+  vertical-align: baseline;
+}
+
+.model_content_bottom {
+  background: #ffffff;
+  margin-top: 0.57rem;
+  margin-bottom: 1.1rem;
+}
+
+.model_content_bottom_detail {
+  border-bottom: solid 0.01rem #f2f2f2;
+  padding: 0.71rem;
+  padding-left: 1.285rem;
+  display: flex;
+}
+
+.model_content_bottom_detail label {
+  color: #9ea7b9;
+  font-size: 1.1rem;
+  margin-right: 1rem;
+}
+
+.model_content_bottom_detail input,
+.span_input {
+  outline: none;
+  font-size: 1rem;
+  vertical-align: text-bottom;
+  flex: 1;
+}
+
+.model_content_bottom_detail .copySpan {
+  border: 0.0714rem solid #fd596a;
+  border-radius: 0.71rem;
+  width: 3rem;
+  height: 1.43rem;
+  text-align: center;
+  font-size: 0.857rem;
+  color: #fd596a;
+  line-height: 1.43rem;
+}
+
+
+
+.modalBankSuccessContent {
+  width: 100%;
+  height: 11.285rem;
+  margin: 10%;
+  background: #f5f5f5;
+  border-radius: 0.71rem;
+  font-size: 1.14rem;
+  text-align: center;
+}
+
+.modalBankSuccessContent p {
+  margin: 2.5rem;
+}
+
+.modalBankSuccessContent .btnClass {
+  width: 10.285rem;
+}
+
+
+
+.modalZfb .modalZfbContent {
+  width: 100%;
+  height: 17.43rem;
+  margin: 10%;
+  background: #f5f5f5;
+  border-radius: 1.1rem;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 1.1rem;
+}
+
+.modalZfbContent img {
+  width: 13.2rem;
+}
+
+.modalZfbContent h3 {
+  font-size: 1.14rem;
+  margin: 0.71rem;
+}
+
+/* 扫码支付顶部提示 */
+.vipTopTips p {
+  font-size: 0.857rem;
+  color: #fd596a;
+  text-align: center;
+}
+
+.vipTopTips p span {
+  font-family: PingFangSC-Semibold;
+  vertical-align: text-bottom;
+}
+
+.vipTopTips .vipBtn {
+  width: 90%;
+  height: 2.857rem;
+  line-height: 2.857rem;
+  margin: 0.71rem auto;
+}
+
+.vipBtn img {
+  width: 1.71rem;
+  margin-left: 5px;
+}
+
+/* 支付宝顶部提示 */
+.zfbTopTips {
+  background-image: url("@/static/zfbImg/tiao_bg.png");
+  background-size: cover;
+  height: 3.57rem;
+  color: #c5471b;
+  margin: 0.71rem;
+  padding: 0.71rem;
+  box-sizing: border-box;
+}
+
+.zfbTopTips div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.zfbTopTips .zfbImgLeft {
+  width: 1.57rem;
+  margin-right: 0.357rem;
+}
+
+.zfbTopTips .zfbImgRight {
+  width: 0.78rem;
+  float: right;
+  margin-top: 0.71rem;
+}
+
+.zfbTopTips h3 {
+  font-size: 0.93rem;
+}
+
+.zfbTopTips p {
+  font-size: 0.71rem;
+}
+
+/* 支付问题详情 */
+.zfbDeail {
+  background: #3754cb;
+  color: #555555;
+  padding-bottom: 2.857rem;
+}
+
+.zfbDeail .alipayClose {
+  position: absolute;
+  width: 3.64rem;
+  top: 1.43rem;
+  left: 1.1rem;
+}
+
+.alipayDetailContent {
+  width: 96%;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 0.71rem;
+  margin-top: -0.71rem;
+  padding: 1.14rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.alipayDetailContent .titleImg {
+  width: 1.14rem;
+}
+
+.alipayDetailContent .titleImg2 {
+  width: 0.857rem;
+}
+
+.alipayDetailTitleDiv {
+  display: inline-block;
+  width: 85%;
+  vertical-align: text-top;
+  margin-bottom: 1.43rem;
+}
+
+.alipayDetailTitleDiv .alipayDetailTitle {
+  font-family: PingFangSC-Semibold;
+  font-size: 1.14rem;
+  color: #1a1a1a;
+}
+/* 支付宝闪付顶部提示 */
+.zfbQuick_headerTips{
+  color: #c5471b;
+  margin: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+/* 发起请求弹窗 */
+.modalHttp {
+  font-size: 1.14rem;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 30%;
+  display: unset;
+}
+
+/* 黑色背景消息提示 */
+.toolTips {
+  border-radius: 0.43rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-size: 1.1rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%);
+  padding: 0.71rem 1.1rem;
+}
+
+/* 底部提示 */
+.footerTips {
+  text-align: center;
+  color: #beccd9;
+  font-size: 0.857rem;
+  margin-bottom: 7.14rem;
+}
+
+footer {
+  background: #ffffff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.71rem;
+  font-size: 15;
+}
+
+footer .payBtnMoney {
+  font-size: 1.285rem;
+  font-family: DINAlternate-Bold;
+  vertical-align: top;
+}
+
+.btnClass {
+  width: 80%;
+  height: 2.57rem;
+  border-radius: 1.43rem;
+  line-height: 2.57rem;
+  margin: 0 auto;
+  background: #cccccc;
+  text-align: center;
+  color: #ffffff;
+}
+
+.btnBg {
+  background-image: linear-gradient(135deg, #ff5a4f 0%, #fa3fcb 100%);
+}
+
+.btnBgRed {
+  background-image: linear-gradient(135deg, #ff3865 0%, #ff8773 100%);
+}
